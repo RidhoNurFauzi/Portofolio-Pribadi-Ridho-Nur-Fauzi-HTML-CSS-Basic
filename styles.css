@@ -111,7 +111,7 @@ html, body {
 }
 
 .passport-banner h1 {
-  font-family: 'Futura Extrabold', sans-serif;
+  font-family: 'EB Garamond', serif;
   font-size: 32px;
   font-weight: 600;
   text-transform: uppercase;
@@ -988,7 +988,7 @@ footer {
 }
 /* License Banner */
 .passport-banner h1 {
-  font-size: clamp(9px, 2vw, 7px);
+  font-size: clamp(12px, 5vw, 7px);
   white-space: normal;
   word-break: break-word;
   white-space: nowrap;  
