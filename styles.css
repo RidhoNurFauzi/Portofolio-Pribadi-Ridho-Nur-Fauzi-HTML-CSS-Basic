@@ -1,7 +1,7 @@
 /* ====== Core palette & type ====== */
 :root {
-  --head-paper: #f0e9cf;        /* cream paper */
-  --paper: #f5f1e6;        /* cream paper */
+  --head-paper: #f3e9c9;        /* cream paper */
+  --paper: #f5efdf;        /* cream paper */
   --ocean: #C4D7DB;       /* light blue */
   --ink: #0a2240;          /* deep navy */
   --accent: #c0392b;       /* red stamp */
@@ -48,7 +48,7 @@ body {
   margin: 0;
   padding: 0;
   padding-top: 120px;
-  background-color: var(--paper);
+  background-color: #f3f2e9;
   font-family: 'EB Garamond', serif;
 }
 
