@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // === Script Bintang Pastel ===
   const starsContainer = document.querySelector(".stars");
   if (starsContainer) {
-    const pastelColors = ["#f7c6c7", "#c6f7e2", "#c6d8f7", "#f7f3c6", "#e2c6f7"];
+    const pastelColors = ["#f3888a", "#9af5cd", "#96b9f7", "#fdf491", "#cf90ff"];
 
     for (let i = 0; i < 50; i++) {
       const star = document.createElement("div");
