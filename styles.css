@@ -90,6 +90,9 @@ html, body {
   background: var(--head-paper);
   border-bottom: 2px dashed var(--ink);
   padding: 18px 0;
+  display: flex;              /* gunakan flexbox */
+  align-items: center;        /* vertikal tengah */
+  justify-content: center;    /* horizontal tengah */
   text-align: center;
 }
 
@@ -102,6 +105,7 @@ html, body {
   margin: 0;
   color: var(--ink);
   line-height: 1.4;
+  white-space: nowrap;        /* cegah turun ke bawah */
 }
 
 .license-details {
@@ -118,6 +122,7 @@ html, body {
   max-width: 1024px;
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(10,34,64,0.08);
+  white-space: nowrap;  
 }
 
 .license-row {
@@ -631,6 +636,141 @@ section#profile {
   box-shadow: 0 4px 8px rgba(10,34,64,0.12);
 }
 
+
+/* ====== Publications Section ====== */
+.publications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+  margin-top: 16px;
+}
+
+.pub-item {
+  width: 100%;
+  max-width: 320px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1.5px dashed var(--ink);
+  box-shadow: 0 6px 12px rgba(10,34,64,0.10);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pub-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 16px rgba(10,34,64,0.16);
+}
+
+.pub-item p {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.pub-item strong {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.pub-item em {
+  font-size: 13px;
+  color: #475975;
+}
+
+/* ====== Contact Form ====== */
+#contact-form {
+  max-width: 600px;
+  margin: 32px auto;
+  padding: 24px;
+  background: var(--paper);
+  border: 1.5px dashed var(--ink);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(10,34,64,0.12);
+}
+
+#contact-form h2 {
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+#contact-form label {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 8px 10px;
+  border: 1.5px dashed var(--ink);
+  border-radius: 6px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 13px;
+  background: #fff;
+  color: var(--ink);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 6px rgba(192,57,43,0.4);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+#contact-form button {
+  padding: 10px 16px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 2px dashed var(--ink);
+  border-radius: 6px;
+  background: var(--ocean);
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact-form button:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 8px rgba(192,57,43,0.4);
+}
+
+
 /* ====== Contact ====== */
 .contact-container {
   display: flex;
@@ -795,6 +935,11 @@ footer {
     font-size: 14px;
   }
 
+  .publications-container {
+  grid-template-columns: 1fr; /* satu kolom penuh */
+  gap: 12px;
+  }
+
   /* Navbar */
   .passport-nav ul {
     flex-wrap: wrap;   /* biar bisa turun ke baris baru */
@@ -934,15 +1079,41 @@ footer {
     font-size: 10px;
   }
 
+  .pub-item {
+  max-width: 100%;
+  padding: 12px;
+  }
+
+  .pub-item p {
+  font-size: 12px;
+  line-height: 1.3;
+  }
+
+  .pub-item strong {
+  font-size: 14px;
+  }
+
+  .pub-item em {
+  font-size: 11px;
+  }
+
   /* Contact */
   .contact-container {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;       /* tetap sejajar horizontal */
+    justify-content: center; /* rata ke kanan */
+    gap: 6px;                  /* jarak antar ikon lebih kecil */
+    flex-wrap: wrap;           /* biar tidak overflow */
   }
 
   .contact-item {
-    width: 100%;
-    justify-content: center;
+    width: auto;               /* kotak kecil sesuai isi */
+    padding: 6px 8px;          /* lebih kecil dari desktop */
+    border-radius: 6px;        /* sudut lebih kecil */
+  }
+
+    .contact-item img {
+    width: 22px;               /* ikon lebih kecil */
+    height: 22px;
   }
 
   /* Footer */
@@ -950,6 +1121,30 @@ footer {
     font-size: 12px;
     padding: 12px;
   }
+
+    #contact-form {
+    padding: 16px;
+  }
+
+  #contact-form h2 {
+    font-size: 18px;
+  }
+
+  #contact-form label {
+    font-size: 12px;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  #contact-form button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
 /* Stamp BON VOYAGE di footer untuk HP */
 .stamp-overlay-approved {
   font-size: 10px;          /* lebih kecil agar pas di layar HP */
