@@ -36,7 +36,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--header-paper);
+  padding-top: 120px;
+  background-color: var(--paper);
   font-family: 'EB Garamond', serif;
 }
 
@@ -86,14 +87,11 @@ html, body {
 }
 
 .passport-banner {
-  width: 100%;
   background: var(--head-paper);
   border-bottom: 2px dashed var(--ink);
   padding: 18px 0;
-  display: flex;              /* gunakan flexbox */
-  align-items: center;        /* vertikal tengah */
-  justify-content: center;    /* horizontal tengah */
   text-align: center;
+  height: 60px; /* tinggi banner */
 }
 
 .passport-banner h1 {
@@ -157,12 +155,18 @@ html, body {
 
 /* ====== Navbar ====== */
 .passport-nav {
+  position: fixed;       /* selalu menempel */
+  top: 0;                /* ujung atas layar */
+  left: 0;
+  width: 100%;
+  z-index: 999;
   background: var(--ocean);
   border-bottom: 2px dashed var(--ink);
-  padding: 12px 0;
+  padding: 4px 0;
   font-family: 'EB Garamond', serif;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
 
 .passport-nav ul {
@@ -188,6 +192,7 @@ html, body {
 
 /* ====== Header ====== */
 header {
+  margin-top: -28px ;
   background: var(--head-paper);
   color: var(--ink);
   padding: 4px 24px;
