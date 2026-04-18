@@ -33,6 +33,17 @@
   font-weight: 700;
 }
 
+#profile,
+#skills,
+#education,
+#certifications,
+#projects,
+#publications,
+#contact {
+  scroll-margin-top: 120px; /* tinggi navbar */
+}
+
+
 body {
   margin: 0;
   padding: 0;
