@@ -32,6 +32,11 @@
   src: url('fonts/LibreFranklin-Bold.ttf') format('truetype');
   font-weight: 700;
 }
+@font-face {
+  font-family: 'Futura Extrabold';
+  src: url('fonts/Futura-ExtraBold Extra Bold.ttf');
+  font-weight: 400;
+}
 
 #profile,
 #skills,
@@ -106,7 +111,7 @@ html, body {
 }
 
 .passport-banner h1 {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Futura Extrabold', sans-serif;
   font-size: 32px;
   font-weight: 600;
   text-transform: uppercase;
@@ -297,7 +302,7 @@ section {
 section h2 {
   display: block;
   text-align: center;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Futura Extrabold', sans-serif;
   font-weight: 600;
   font-size: 28px;
   margin: 0 0 24px;
