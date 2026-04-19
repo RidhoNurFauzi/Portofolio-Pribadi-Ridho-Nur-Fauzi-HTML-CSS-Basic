@@ -998,18 +998,17 @@ footer {
 }
 
 .email-float img {
-  width: 80px;    /* ukuran icon */
-  height: 80px;
-  background-color: #c4d7dbee;
-  border-radius: 50%;       /* bulat */
+  width: 130px;   /* lebih besar di desktop */
+  height: 130px;
+  background-color: #c4d7db00;
+  border-radius: 50%;
   box-shadow: 0 10px 8px rgba(0, 0, 0, 0.788);
   transition: transform 0.3s ease;
 }
 
 .email-float img:hover {
-  transform: scale(1.1);    /* efek zoom saat hover */
+  transform: scale(1.1);
 }
-
 
 /* ====== Responsive untuk layar HP (≤480px) ====== */
 @media (max-width: 480px) {
@@ -1262,5 +1261,9 @@ footer {
   position: relative;      /* biar stamp bisa absolute di atasnya */
   z-index: 1;              /* signature di bawah stamp */
 }
+  .email-float img {
+    width: 90px;   /* lebih kecil di HP */
+    height: 90px;
+  }
 
 }
