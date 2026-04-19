@@ -222,7 +222,7 @@ html, body {
 
 /* ====== Header ====== */
 header {
-  margin-top: -25px ;
+  margin-top: 5px ;
   background: var(--head-paper);
   color: var(--ink);
   padding: 4px 24px;
