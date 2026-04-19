@@ -989,6 +989,15 @@ footer {
   pointer-events: none;
 }
 
+.tag-contact-overlay {
+  position: absolute;
+  top: 90px;
+  right: 10px;
+  width: 200px; 
+  mix-blend-mode: multiply;
+  z-index: 2;
+  pointer-events: none;
+}
 
 .email-float {
   position: fixed;
@@ -1002,7 +1011,7 @@ footer {
   height: 130px;
   background-color: #c4d7db00;
   border-radius: 50%;
-  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.788);
+  box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.788);
   transition: transform 0.3s ease;
 }
 
