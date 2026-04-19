@@ -37,6 +37,11 @@
   src: url('fonts/Futura-ExtraBold Extra Bold.ttf');
   font-weight: 400;
 }
+@font-face {
+  font-family: 'Buinton';
+  src: url('fonts/demo-buinton.otf');
+  font-weight: 700;
+}
 
 #profile,
 #skills,
@@ -737,7 +742,7 @@ section#profile {
   max-width: 600px;
   margin: 32px auto;
   padding: 24px;
-  background: var(--paper);
+  background: var(--head-paper);
   border: 1.5px dashed var(--ink);
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(10,34,64,0.12);
