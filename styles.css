@@ -1156,7 +1156,10 @@ footer {
 
   /* Projects */
   .project {
-    width: 100%;
+    flex: 0 0 auto;       /* jangan dipaksa mengecil */
+    min-width: 280px;     /* batas minimal lebar */
+    width: 90%;           /* tetap proporsional */
+    margin: 0 auto;       /* biar rata tengah */
   }
 
   .project h3 {
