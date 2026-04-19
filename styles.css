@@ -98,6 +98,19 @@ html, body {
 }
 
 
+/* ==== Star section ===== */
+/* Bintang khusus di samping teks h2 */
+.star-inline {
+  display: inline;          /* tetap inline dengan teks */
+  font-size: 1.2em;         /* sesuaikan ukuran */
+  line-height: 1;           /* hindari naik/turun */
+  vertical-align: middle;   /* sejajarkan dengan huruf */
+}
+
+.star-inline.left { color: rgb(226, 149, 149); }
+.star-inline.right { color: rgb(149, 149, 219); }
+
+
 @keyframes twinkle {
   0%, 100% { transform: scale(1); opacity: 0.9; }
   50% { transform: scale(1.3) rotate(20deg); opacity: 0.4; }
@@ -209,7 +222,7 @@ html, body {
 
 /* ====== Header ====== */
 header {
-  margin-top: -20px ;
+  margin-top: -10px ;
   background: var(--head-paper);
   color: var(--ink);
   padding: 4px 24px;
@@ -960,14 +973,26 @@ footer {
   z-index: 1;
 }
 
-
-
-
+.tag-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 520px; 
+  mix-blend-mode: multiply;
+  z-index: 2;
+  pointer-events: none;
+}
 
 /* ====== Responsive untuk layar HP (≤480px) ====== */
 @media (max-width: 480px) {
   body {
     font-size: 14px;
+  }
+
+  .tag-overlay {
+  width: 200px;   /* perkecil ukuran di layar HP */
+  top: 110px;       /* jarak dari atas lebih kecil */
+  right: -28px;     /* jarak dari kanan lebih kecil */
   }
 
   .publications-container {
