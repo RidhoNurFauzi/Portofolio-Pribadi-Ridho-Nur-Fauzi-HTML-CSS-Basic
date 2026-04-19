@@ -990,9 +990,9 @@ footer {
   }
 
   .tag-overlay {
-  width: 200px;   /* perkecil ukuran di layar HP */
+  width: 180px;   /* perkecil ukuran di layar HP */
   top: 110px;       /* jarak dari atas lebih kecil */
-  right: -28px;     /* jarak dari kanan lebih kecil */
+  right: 1px;     /* jarak dari kanan lebih kecil */
   }
 
   .publications-container {
