@@ -988,6 +988,28 @@ footer {
   pointer-events: none;
 }
 
+
+.email-float {
+  position: fixed;
+  bottom: 20px;   /* jarak dari bawah */
+  right: 20px;    /* jarak dari kanan */
+  z-index: 999;   /* selalu di atas elemen lain */
+}
+
+.email-float img {
+  width: 80px;    /* ukuran icon */
+  height: 80px;
+  background-color: #c4d7dbc4;
+  border-radius: 50%;       /* bulat */
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.788);
+  transition: transform 0.3s ease;
+}
+
+.email-float img:hover {
+  transform: scale(1.1);    /* efek zoom saat hover */
+}
+
+
 /* ====== Responsive untuk layar HP (≤480px) ====== */
 @media (max-width: 480px) {
   body {
