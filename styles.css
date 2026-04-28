@@ -1,5 +1,6 @@
 /* ====== Core palette & type ====== */
 :root {
+  --callmeback: #f8f0d2;   /* light parchment */
   --head-paper: #f3e9c9;        /* cream paper */
   --paper: #f5efdf;        /* cream paper */
   --ocean: #C4D7DB;       /* light blue */
@@ -43,6 +44,15 @@
   font-weight: 700;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none; /* tetap tanpa underline saat hover */
+  color: var(--accent);  /* warna berubah sesuai desain */
+}
+
 #profile,
 #skills,
 #education,
@@ -51,7 +61,7 @@
 #publications,
 #contact-section,
 #contact {
-  scroll-margin-top: 100px; /* tinggi navbar */
+  scroll-margin-top: 145px; /* tinggi navbar */
 }
 
 
@@ -123,7 +133,7 @@ html, body {
 }
 
 .passport-banner {
-  background: rgb(143, 80, 29);
+  background: rgb(121, 71, 30);
   border-bottom: 2px dashed var(--ink);
   padding: 18px 0;
   text-align: center;
@@ -155,7 +165,7 @@ html, body {
   margin: 24px auto;
   max-width: 1024px;
   border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(10,34,64,0.08);
+  box-shadow: 0 6px 12px rgba(1, 115, 255, 0.08);
   white-space: nowrap;  
 }
 
@@ -196,13 +206,13 @@ html, body {
   left: 0;
   width: 100%;
   z-index: 999;
-  background: var(--head-paper);
+  background: var(--callmeback);
   border-bottom: 2px dashed var(--ink);
   padding: 4px 0;
   font-family: 'EB Garamond', serif;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 6px rgba(138, 69, 4, 0.26);
 }
 
 .passport-nav ul {
@@ -217,7 +227,7 @@ html, body {
 }
 
 .passport-nav a {
-  color: var(--ink);
+  color: #4a2c1d;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
@@ -249,7 +259,7 @@ header {
   object-fit: cover;
   background: #fff;
   border: 2px solid #e5ded0;
-  box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 120px 20px rgba(0,0,0,0.08);
   transform: rotate(-1.5deg);
   position: relative;
 }
@@ -259,7 +269,7 @@ header {
   position: absolute;
   width: 64px; height: 18px;
   background: #f3eacf;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.12);
+  box-shadow: 0 40px 6px rgba(0,0,0,0.12);
 }
 .profile-photo::before { top: -12px; left: 24px; transform: rotate(-6deg); }
 .profile-photo::after { bottom: -12px; right: 24px; transform: rotate(6deg); }
@@ -276,12 +286,12 @@ header {
   font-weight: 600;
   font-size: 48px;
   text-transform: uppercase;
-  margin: 0 auto 12px;
+  margin:  30px ;
   color: var(--ink);
   letter-spacing: 0.18em;
   display: block;       /* biar full baris */
   text-align: center;   /* pastikan di tengah */
-    white-space: nowrap;  
+  white-space: nowrap;  
 }
 .passport-title {
   font-size: 32px;
@@ -317,7 +327,7 @@ section {
   border: 1.5px solid var(--ink);
   border-radius: 12px;
   box-shadow:
-    0 4px 8px rgba(10, 34, 64, 0.12),
+    0 20px 8px rgba(10, 34, 64, 0.12),
     0 12px 24px rgba(10, 34, 64, 0.08);
   position: relative;
 }
@@ -397,7 +407,7 @@ section#profile {
   letter-spacing: 0.14em;
   font-size: 14px;
   margin: 0 0 8px;
-  color: #2b3c5a;
+  color: #4a2c1d;
 }
 
 /* ====== Skills ====== */
@@ -430,7 +440,7 @@ section#profile {
   left: 50%;
   top: 0; bottom: 0;
   width: 2px;
-  background: var(--ocean);
+  background: #4a2c1d;
   opacity: 1.15;
   transform: translateX(-50%);
 }
@@ -857,7 +867,7 @@ footer {
   position: relative;
   margin-top: 24px;
   padding: 60px 16px;
-  background: rgb(143, 80, 29);
+  background:rgb(121, 71, 30);
   color: var(--paper);
   border-top: 3px double var(--paper);
   text-align: center;
